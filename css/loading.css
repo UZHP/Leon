@@ -1,0 +1,50 @@
+/* ========== Start Loader ========== */
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--whiteC);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  text-transform: capitalize;
+}
+
+.loader .load {
+  width: 50px;
+  height: 50px;
+  border: 5px dashed var(--mainC);
+  animation-name: load;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  animation-timing-function: ease-in-out;
+  background-color: var(--mainBC);
+}
+
+@keyframes load {
+  to {
+    transform: rotateZ(90deg);
+    -webkit-transform: rotateZ(90deg);
+    -moz-transform: rotateZ(90deg);
+    -ms-transform: rotateZ(90deg);
+    -o-transform: rotateZ(90deg);
+}
+}
+
+.disappear {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition-delay: 2.5s;
+}
+
+/* ========== End Loader ========== */
